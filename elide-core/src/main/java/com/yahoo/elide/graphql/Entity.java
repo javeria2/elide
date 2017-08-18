@@ -47,7 +47,7 @@ public class Entity {
         @Getter private String name;
         @Getter private Object value;
 
-        public Attribute(String name, Object value) {
+        private Attribute(String name, Object value) {
             this.name = name;
             this.value = value;
         }
@@ -57,7 +57,7 @@ public class Entity {
         @Getter private String name;
         @Getter private Set<Entity> value;
 
-        public Relationship(String name, Set<Entity> value) {
+        private Relationship(String name, Set<Entity> value) {
             this.name = name;
             this.value = value;
         }

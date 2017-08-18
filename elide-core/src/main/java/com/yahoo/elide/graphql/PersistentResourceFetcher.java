@@ -149,7 +149,7 @@ public class PersistentResourceFetcher implements DataFetcher {
             } else if(dictionary.isRelation(parentClass, fieldName)) { /* fetch relationship properties */
                 return fetchRelationship(context.parentResource, fieldName, context.ids);
             } else if(Objects.equals(idFieldName, fieldName)) {
-                return context.parentResource.getId();
+                return context.parentResource;
             } else {
                 throw new BadRequestException("Unrecognized object: " + fieldName + " for: " + parentClass.getName());
             }
